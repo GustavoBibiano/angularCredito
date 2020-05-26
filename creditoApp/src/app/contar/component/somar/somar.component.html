@@ -1,29 +1,64 @@
 <div class="cow">
   <div class="col-12">
     <div class="jumbotron">
-      <h1 class="display-4">Soma de Produtos</h1>
+      <h1 class="display-4">Créditos</h1><br>
         <div class="row">
-          <div class="col-12">
+          <div class="col-6">
             <div class="form-group">
-              <label for="">Valor total</label>
+              <label for=""><h3 class="display-6"> Saldo </h3></label>
               <input type="text" class="form-control" readonly [value]="pegaValor">
             </div>
           </div>
+
+            <div class="col-6">
+              <div class="form-group">
+                <label for=""><h3 class="display-6"> Descontar </h3></label>
+                <button class="btn btn-light btn-block" (click)="calcula(-1)">-1</button>
+              </div>
+            </div>
         </div>
     </div>
   </div>
 </div>
 
-<div class="row">
-    <div class="col-4">
-      <button class="btn btn-primary btn-block" (click)="calcula(5)">Lanche R$ 5,00</button>
-    </div>
+<div class="cow">
+  <div class="col-12">
+    <div class="jumbotron">
+      <h1 class="display-4">Operações</h1><br>
 
-    <div class="col-4">
-      <button class="btn btn-primary btn-block" (click)="calcula(4)">Bebida R$ 4,00</button>
-    </div>
+      <h1 class="display-6">Depósito</h1><br><br>
 
-    <div class="col-4">
-      <button class="btn btn-primary btn-block" (click)="calcula(3)">Sobremesa R$ 3,00</button>
+        <div class="row">
+          <div class="col-4">
+            <button class="btn btn-primary btn-block" (click)="calcula(1)">1</button>
+          </div>
+
+          <div class="col-4">
+            <button class="btn btn-primary btn-block" (click)="calcula(10)">10</button>
+          </div>
+
+          <div class="col-4">
+            <button class="btn btn-primary btn-block" (click)="calcula(100)">100</button>
+          </div>
+        </div><br>
+
+      <h1 class="display-6">Saque</h1><br><br>
+
+        <div class="row">
+          <div class="col-4">
+            <button class="btn btn-primary btn-block" (click)="calcula(-1)">-1</button>
+          </div>
+
+          <div class="col-4">
+            <button class="btn btn-primary btn-block" (click)="calcula(-10)">-10</button>
+          </div>
+
+          <div class="col-4">
+            <button class="btn btn-primary btn-block" (click)="calcula(-100)">-100</button>
+          </div>
+        </div><br>
+
+
     </div>
+  </div>
 </div>

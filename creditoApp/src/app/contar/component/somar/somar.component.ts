@@ -11,7 +11,7 @@ export class SomarComponent implements OnInit {
   constructor(private somar: SomarService) { }
 
   ngOnInit(): void {
-    this.valor1 = 0;
+    this.valor1 = 10;
   }
   calcula(valorInserido: number){
       this.valor1 = this.somar.somar(this.valor1, valorInserido);
